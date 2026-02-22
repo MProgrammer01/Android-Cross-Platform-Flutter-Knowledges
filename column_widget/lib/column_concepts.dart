@@ -85,7 +85,7 @@ class ColumnConcepts extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            width: double.infinity,//for take full width of screen
+            width: double.infinity,//for take full width of the element inside which it is found
             decoration: BoxDecoration(
               color: Colors.grey.shade200,
               borderRadius: BorderRadius.circular(8),
