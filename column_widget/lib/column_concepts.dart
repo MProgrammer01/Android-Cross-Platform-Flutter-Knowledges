@@ -302,73 +302,205 @@ class ColumnConcepts extends StatelessWidget {
           // MainAxisSize.max
           const Text(
             'MainAxisSize.max (default)',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'Column ياخد كل الارتفاع المتاح (انظر الخلفية الحمراء)',
+            style: TextStyle(color: Colors.grey, fontSize: 12),
           ),
           const SizedBox(height: 8),
           Container(
             width: double.infinity,
+            height: 300, // ⭐ حددنا الارتفاع باش نشوفو الفرق
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.red, width: 2),
+              border: Border.all(color: Colors.grey.shade400, width: 2),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-
-              children: [
-                Container(
-                  width: 100,
-                  height: 50,
-                  color: Colors.blue,
-                  child: const Center(child: Text('Item 1')),
-                ),
-                const SizedBox(height: 8),
-                Container(
-                  width: 100,
-                  height: 50,
-                  color: Colors.green,
-                  child: const Center(child: Text('Item 2')),
-                ),
-              ],
+            child: Container(
+              // ⭐ Background أحمر للـ Column كامل
+              color: Colors.red.withOpacity(0.2),
+              child: Column(
+                mainAxisSize: MainAxisSize.max, // كل الارتفاع
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.blue,
+                    child: const Center(
+                      child: Text(
+                        'Item 1',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Container(
+                    width: 100,
+                    height: 50,
+                    color: Colors.green,
+                    child: const Center(
+                      child: Text(
+                        'Item 2',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('mainAxisSize: MainAxisSize.max'),
+          _buildCodeBox(
+              'mainAxisSize: MainAxisSize.max\n'
+                  '// Column ياخد كل الـ 300px المتاحة'
+          ),
 
           const SizedBox(height: 16),
 
           // MainAxisSize.min
           const Text(
             'MainAxisSize.min',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'Column ياخد فقط الارتفاع المحتاج (انظر الخلفية الخضراء)',
+            style: TextStyle(color: Colors.grey, fontSize: 12),
           ),
           const SizedBox(height: 8),
           Container(
             width: double.infinity,
+            height: 300, // ⭐ نفس الارتفاع
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.red, width: 2),
+              border: Border.all(color: Colors.grey.shade400, width: 2),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  width: 100,
-                  height: 50,
-                  color: Colors.blue,
-                  child: const Center(child: Text('Item 1')),
-                ),
-                const SizedBox(height: 8),
-                Container(
-                  width: 100,
-                  height: 50,
-                  color: Colors.green,
-                  child: const Center(child: Text('Item 2')),
+                  // ⭐ Background أخضر فقط للارتفاع المحتاج
+                  color: Colors.green.withOpacity(0.2),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min, // الارتفاع المحتاج فقط
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 50,
+                        color: Colors.blue,
+                        child: const Center(
+                          child: Text(
+                            'Item 1',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Container(
+                        width: 100,
+                        height: 50,
+                        color: Colors.green,
+                        child: const Center(
+                          child: Text(
+                            'Item 2',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('mainAxisSize: MainAxisSize.min'),
+          _buildCodeBox(
+              'mainAxisSize: MainAxisSize.min\n'
+                  '// Column ياخد فقط 108px (50+8+50)'
+          ),
+
+          const SizedBox(height: 16),
+
+          // مثال توضيحي إضافي
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.blue.shade50,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.blue.shade200),
+            ),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.info_outline, color: Colors.blue),
+                    SizedBox(width: 8),
+                    Text(
+                      'انظر الفرق في الخلفية الملونة:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 12),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('🔴 ', style: TextStyle(fontSize: 20)),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'MainAxisSize.max:',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'الخلفية الحمراء تملأ كل الارتفاع (300px)',
+                            style: TextStyle(fontSize: 13),
+                          ),
+                          Text(
+                            'Column ياخد كل المساحة المتاحة',
+                            style: TextStyle(fontSize: 13),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 8),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('🟢 ', style: TextStyle(fontSize: 20)),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'MainAxisSize.min:',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'الخلفية الخضراء تاخد فقط 108px',
+                            style: TextStyle(fontSize: 13),
+                          ),
+                          Text(
+                            'Column ياخد فقط حجم العناصر (50+8+50)',
+                            style: TextStyle(fontSize: 13),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
