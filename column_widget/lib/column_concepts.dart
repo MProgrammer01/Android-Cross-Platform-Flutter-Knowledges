@@ -127,7 +127,8 @@ class ColumnConcepts extends StatelessWidget {
                   "    Widget2,\n"
                   "    Widget3,\n"
                   "  ],\n"
-                  ")"
+                  ")",
+              TextDirection.ltr
           ),
         ],
       ),
@@ -287,7 +288,7 @@ class ColumnConcepts extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('crossAxisAlignment: CrossAxisAlignment.baseline'),
+          _buildCodeBox('crossAxisAlignment: CrossAxisAlignment.baseline', TextDirection.ltr),
         ],
       ),
     );
@@ -308,6 +309,7 @@ class ColumnConcepts extends StatelessWidget {
           const Text(
             'Column ياخد كل الارتفاع المتاح (انظر الخلفية الحمراء)',
             style: TextStyle(color: Colors.grey, fontSize: 12),
+            textDirection: TextDirection.rtl,
           ),
           const SizedBox(height: 8),
           Container(
@@ -354,7 +356,8 @@ class ColumnConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           _buildCodeBox(
               'mainAxisSize: MainAxisSize.max\n'
-                  '// Column ياخد كل الـ 300px المتاحة'
+                  '// Column ياخد كل الـ 300px المتاحة',
+              TextDirection.rtl
           ),
 
           const SizedBox(height: 16),
@@ -368,6 +371,7 @@ class ColumnConcepts extends StatelessWidget {
           const Text(
             'Column ياخد فقط الارتفاع المحتاج (انظر الخلفية الخضراء)',
             style: TextStyle(color: Colors.grey, fontSize: 12),
+            textDirection: TextDirection.rtl,
           ),
           const SizedBox(height: 8),
           Container(
@@ -417,7 +421,8 @@ class ColumnConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           _buildCodeBox(
               'mainAxisSize: MainAxisSize.min\n'
-                  '// Column ياخد فقط 108px (50+8+50)'
+                  '// Column ياخد فقط 108px (50+8+50)',
+              TextDirection.rtl
           ),
 
           const SizedBox(height: 16),
@@ -443,6 +448,7 @@ class ColumnConcepts extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
+                      textDirection: TextDirection.rtl,
                     ),
                   ],
                 ),
@@ -462,10 +468,12 @@ class ColumnConcepts extends StatelessWidget {
                           Text(
                             'الخلفية الحمراء تملأ كل الارتفاع (300px)',
                             style: TextStyle(fontSize: 13),
+                            textDirection: TextDirection.rtl,
                           ),
                           Text(
                             'Column ياخد كل المساحة المتاحة',
                             style: TextStyle(fontSize: 13),
+                            textDirection: TextDirection.rtl,
                           ),
                         ],
                       ),
@@ -488,10 +496,12 @@ class ColumnConcepts extends StatelessWidget {
                           Text(
                             'الخلفية الخضراء تاخد فقط 108px',
                             style: TextStyle(fontSize: 13),
+                            textDirection: TextDirection.rtl,
                           ),
                           Text(
                             'Column ياخد فقط حجم العناصر (50+8+50)',
                             style: TextStyle(fontSize: 13),
+                            textDirection: TextDirection.rtl,
                           ),
                         ],
                       ),
@@ -588,7 +598,7 @@ class ColumnConcepts extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('SizedBox(height: 16)'),
+          _buildCodeBox('SizedBox(height: 16)', TextDirection.ltr),
 
           const SizedBox(height: 16),
 
@@ -635,7 +645,7 @@ class ColumnConcepts extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('Padding(padding: EdgeInsets.only(bottom: 12))'),
+          _buildCodeBox('Padding(padding: EdgeInsets.only(bottom: 12))', TextDirection.ltr),
         ],
       ),
     );
@@ -677,8 +687,8 @@ class ColumnConcepts extends StatelessWidget {
                 // Image
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.network(
-                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+                  child: Image.asset(
+                    'assets/logo.jpg',
                     width: 200,
                     height: 120,
                     fit: BoxFit.cover,
@@ -913,7 +923,8 @@ class ColumnConcepts extends StatelessWidget {
                   '  child: Column(\n'
                   '    children: [...],\n'
                   '  ),\n'
-                  ')'
+                  ')',
+            TextDirection.ltr
           ),
         ],
       ),
@@ -1131,7 +1142,7 @@ class ColumnConcepts extends StatelessWidget {
   }
 
   // ==================== Helper Methods ====================
-  Widget _buildCodeBox(String code) {
+  Widget _buildCodeBox(String code, TextDirection direction) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
@@ -1146,7 +1157,9 @@ class ColumnConcepts extends StatelessWidget {
         style: const TextStyle(
           fontFamily: 'monospace',
           fontSize: 12,
+
         ),
+        textDirection: direction,
       ),
     );
   }
