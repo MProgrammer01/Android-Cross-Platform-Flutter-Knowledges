@@ -481,8 +481,8 @@ class CardConcepts extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.network(
-                  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+                Image.asset(
+                  'assets/logo.jpg',
                   height: 200,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -520,8 +520,8 @@ class CardConcepts extends StatelessWidget {
                     topLeft: Radius.circular(4),
                     bottomLeft: Radius.circular(4),
                   ),
-                  child: Image.network(
-                    'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+                  child: Image.asset(
+                    'assets/logo.jpg',
                     width: 120,
                     height: 120,
                     fit: BoxFit.cover,
@@ -559,8 +559,8 @@ class CardConcepts extends StatelessWidget {
             clipBehavior: Clip.antiAlias,
             child: Stack(
               children: [
-                Image.network(
-                  'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d',
+                Image.asset(
+                  'assets/logo.jpg',
                   height: 200,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -631,8 +631,8 @@ class CardConcepts extends StatelessWidget {
           Card(
             child: ListTile(
               leading: const CircleAvatar(
-                backgroundImage: NetworkImage(
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+                backgroundImage: AssetImage(
+                  'assets/logo.jpg',
                 ),
               ),
               title: const Text('Jane Smith'),
@@ -794,8 +794,8 @@ class CardConcepts extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    Image.network(
-                      'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
+                    Image.asset(
+                      'assets/logo.jpg',
                       height: 200,
                       width: double.infinity,
                       fit: BoxFit.cover,
