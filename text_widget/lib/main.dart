@@ -12,32 +12,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _buildAppBar(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _buildSectionTitle('Text Alignment'),
-            _buildTextAlignmentExamples(),
-
-            _buildSectionTitle('Text Direction (RTL/LTR)'),
-            _buildTextDirectionExamples(),
-
-            _buildSectionTitle('Text Overflow'),
-            _buildTextOverflowExamples(),
-
-            _buildSectionTitle('Soft Wrap'),
-            _buildSoftWrapExamples(),
-
-            _buildSectionTitle('Max Lines'),
-            _buildMaxLinesExample(),
-
-            _buildSectionTitle('Text Styling'),
-            _buildTextStylingExample(),
-
-            _buildSectionTitle('Text Shadows'),
-            _buildTextShadowsExample(),
-          ],
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: _buildAppBar(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              _buildSectionTitle('Text Alignment'),
+              _buildTextAlignmentExamples(),
+      
+              _buildSectionTitle('Text Direction (RTL/LTR)'),
+              _buildTextDirectionExamples(),
+      
+              _buildSectionTitle('Text Overflow'),
+              _buildTextOverflowExamples(),
+      
+              _buildSectionTitle('Soft Wrap'),
+              _buildSoftWrapExamples(),
+      
+              _buildSectionTitle('Max Lines'),
+              _buildMaxLinesExample(),
+      
+              _buildSectionTitle('Text Styling'),
+              _buildTextStylingExample(),
+      
+              _buildSectionTitle('Text Shadows'),
+              _buildTextShadowsExample(),
+            ],
+          ),
         ),
       ),
     );

@@ -407,8 +407,8 @@ class ContainerConceptsApp extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+              image: AssetImage(
+                'assets/logo.jpg',
               ),
               fit: BoxFit.cover,
             ),
@@ -440,8 +440,8 @@ class ContainerConceptsApp extends StatelessWidget {
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(15),
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+              image: AssetImage(
+                'assets/logo.jpg',
               ),
               fit: BoxFit.contain,
             ),
@@ -471,8 +471,8 @@ class ContainerConceptsApp extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d',
+              image: AssetImage(
+                'assets/logo.jpg',
               ),
               fit: BoxFit.fill,
             ),
@@ -526,8 +526,8 @@ class ContainerConceptsApp extends StatelessWidget {
               ),
             ],
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',
+              image: AssetImage(
+                'assets/logo.jpg',
               ),
               fit: BoxFit.cover,
             ),
@@ -542,8 +542,8 @@ class ContainerConceptsApp extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             image: const DecorationImage(
-              image: NetworkImage(
-                'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5',
+              image: AssetImage(
+                'assets/logo.jpg',
               ),
               fit: BoxFit.cover,
             ),

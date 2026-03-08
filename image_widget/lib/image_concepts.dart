@@ -193,8 +193,8 @@ class ImageConcepts extends StatelessWidget {
             border: Border.all(color: Colors.grey),
             color: Colors.grey.shade200,
           ),
-          child: Image.network(
-            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+          child: Image.asset(
+            'assets/images/logo.jpg',
             fit: fit,
           ),
         ),
@@ -227,8 +227,8 @@ class ImageConcepts extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+              child: Image.asset(
+                'assets/images/logo.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -257,8 +257,8 @@ class ImageConcepts extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
-              child: Image.network(
-                'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d',
+              child: Image.asset(
+                'assets/images/logo.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -283,8 +283,8 @@ class ImageConcepts extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',
+              child: Image.asset(
+                'assets/images/logo.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -311,8 +311,8 @@ class ImageConcepts extends StatelessWidget {
             width: 300,
             height: 200,
             color: Colors.grey.shade300,
-            child: Image.network(
-              'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5',
+            child: Image.asset(
+              'assets/images/logo.jpg',
               width: 150,
               height: 100,
               alignment: Alignment.topLeft,
@@ -332,8 +332,8 @@ class ImageConcepts extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey),
             ),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1579546929518-9e396f3cc809',
+            child: Image.asset(
+              'assets/images/logo.jpg',
               width: 100,
               height: 100,
               repeat: ImageRepeat.repeat,
@@ -359,8 +359,8 @@ class ImageConcepts extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
-          Image.network(
-            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+          Image.asset(
+            'assets/images/logo.jpg',
             width: 250,
             height: 150,
             fit: BoxFit.cover,
@@ -373,8 +373,8 @@ class ImageConcepts extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
-          Image.network(
-            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+          Image.asset(
+            'assets/images/logo.jpg',
             width: 250,
             height: 150,
             fit: BoxFit.cover,
@@ -389,8 +389,8 @@ class ImageConcepts extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
-          Image.network(
-            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+          Image.asset(
+            'assets/images/logo.jpg',
             width: 250,
             height: 150,
             fit: BoxFit.cover,
@@ -405,8 +405,8 @@ class ImageConcepts extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
-          Image.network(
-            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+          Image.asset(
+            'assets/images/logo.jpg',
             width: 250,
             height: 150,
             fit: BoxFit.cover,
@@ -421,8 +421,8 @@ class ImageConcepts extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
-          Image.network(
-            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+          Image.asset(
+            'assets/images/logo.jpg',
             width: 250,
             height: 150,
             fit: BoxFit.cover,
@@ -465,8 +465,8 @@ class ImageConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           const CircleAvatar(
             radius: 75,
-            backgroundImage: NetworkImage(
-              'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d',
+            backgroundImage: AssetImage(
+              'assets/images/logo.jpg',
             ),
           ),
           const SizedBox(height: 16),
@@ -479,8 +479,8 @@ class ImageConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           ClipRRect(
             borderRadius: BorderRadius.circular(25),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',
+            child: Image.asset(
+              'assets/images/logo.jpg',
               width: 250,
               height: 150,
               fit: BoxFit.cover,
@@ -496,8 +496,8 @@ class ImageConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           ClipPath(
             clipper: TriangleClipper(),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5',
+            child: Image.asset(
+              'assets/images/logo.jpg',
               width: 200,
               height: 200,
               fit: BoxFit.cover,
@@ -513,8 +513,8 @@ class ImageConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           ClipPath(
             clipper: HexagonClipper(),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1579546929518-9e396f3cc809',
+            child: Image.asset(
+              'assets/images/logo.jpg',
               width: 200,
               height: 200,
               fit: BoxFit.cover,

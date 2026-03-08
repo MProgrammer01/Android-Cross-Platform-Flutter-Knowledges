@@ -127,8 +127,10 @@ class RowConcepts extends StatelessWidget {
                   "    Widget2,\n"
                   "    Widget3,\n"
                   "  ],\n"
-                  ")"
+                  ")",
+            TextDirection.ltr,
           ),
+
         ],
       ),
     );
@@ -291,7 +293,7 @@ class RowConcepts extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('crossAxisAlignment: CrossAxisAlignment.baseline'),
+          _buildCodeBox('crossAxisAlignment: CrossAxisAlignment.baseline',  TextDirection.ltr,),
         ],
       ),
     );
@@ -312,6 +314,7 @@ class RowConcepts extends StatelessWidget {
           const Text(
             'Row ياخد كل العرض المتاح (انظر الخلفية الحمراء)',
             style: TextStyle(color: Colors.grey, fontSize: 12),
+            textDirection: TextDirection.rtl,
           ),
           const SizedBox(height: 8),
           Container(
@@ -347,7 +350,8 @@ class RowConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           _buildCodeBox(
               'mainAxisSize: MainAxisSize.max\n'
-                  '// Row ياخد كل العرض المتاح'
+                  '// Row ياخد كل العرض المتاح',
+            TextDirection.rtl,
           ),
 
           const SizedBox(height: 16),
@@ -361,6 +365,7 @@ class RowConcepts extends StatelessWidget {
           const Text(
             'Row ياخد فقط العرض المحتاج (انظر الخلفية الخضراء)',
             style: TextStyle(color: Colors.grey, fontSize: 12),
+            textDirection: TextDirection.rtl,
           ),
           const SizedBox(height: 8),
           Container(
@@ -399,7 +404,8 @@ class RowConcepts extends StatelessWidget {
           const SizedBox(height: 8),
           _buildCodeBox(
               'mainAxisSize: MainAxisSize.min\n'
-                  '// Row ياخد فقط 128px (60+8+60)'
+                  '// Row ياخد فقط 128px (60+8+60)',
+            TextDirection.rtl,
           ),
 
           const SizedBox(height: 16),
@@ -425,6 +431,7 @@ class RowConcepts extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
+                      textDirection: TextDirection.rtl,
                     ),
                   ],
                 ),
@@ -444,6 +451,7 @@ class RowConcepts extends StatelessWidget {
                           Text(
                             'الخلفية الحمراء تملأ كل العرض',
                             style: TextStyle(fontSize: 13),
+                            textDirection: TextDirection.rtl,
                           ),
                         ],
                       ),
@@ -466,6 +474,7 @@ class RowConcepts extends StatelessWidget {
                           Text(
                             'الخلفية الخضراء تاخد فقط 128px',
                             style: TextStyle(fontSize: 13),
+                            textDirection: TextDirection.rtl,
                           ),
                         ],
                       ),
@@ -562,7 +571,7 @@ class RowConcepts extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('SizedBox(width: 16)'),
+          _buildCodeBox('SizedBox(width: 16)',  TextDirection.ltr,),
 
           const SizedBox(height: 16),
 
@@ -609,7 +618,7 @@ class RowConcepts extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          _buildCodeBox('Padding(padding: EdgeInsets.only(right: 12))'),
+          _buildCodeBox('Padding(padding: EdgeInsets.only(right: 12))', TextDirection.ltr,),
         ],
       ),
     );
@@ -679,8 +688,8 @@ class RowConcepts extends StatelessWidget {
                 // Image
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.network(
-                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+                  child: Image.asset(
+                    'assets/logo.jpg',
                     width: 60,
                     height: 60,
                     fit: BoxFit.cover,
@@ -882,7 +891,8 @@ class RowConcepts extends StatelessWidget {
                   '  child: Row(\n'
                   '    children: [...],\n'
                   '  ),\n'
-                  ')'
+                  ')',
+            TextDirection.ltr,
           ),
         ],
       ),
@@ -982,8 +992,8 @@ class RowConcepts extends StatelessWidget {
                   const SizedBox(height: 12),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.network(
-                      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+                    child: Image.asset(
+                      'assets/logo.jpg',
                       width: double.infinity,
                       height: 200,
                       fit: BoxFit.cover,
@@ -1014,8 +1024,8 @@ class RowConcepts extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.network(
-                      'https://images.unsplash.com/photo-1523275335684-37898b6baf30',
+                    child: Image.asset(
+                      'assets/logo.jpg',
                       width: 100,
                       height: 100,
                       fit: BoxFit.cover,
@@ -1123,7 +1133,7 @@ class RowConcepts extends StatelessWidget {
   }
 
   // ==================== Helper Methods ====================
-  Widget _buildCodeBox(String code) {
+  Widget _buildCodeBox(String code, TextDirection direction) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
@@ -1139,6 +1149,7 @@ class RowConcepts extends StatelessWidget {
           fontFamily: 'monospace',
           fontSize: 12,
         ),
+        textDirection: direction,
       ),
     );
   }
